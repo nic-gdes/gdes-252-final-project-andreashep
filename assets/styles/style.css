@@ -1,0 +1,98 @@
+:root {
+  --blue: #234876;
+  --gold: #ffa500;
+  --grey: #cccccc;
+  --black: #333333;
+  font-family: Verdana, Avenir, PT Sans, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+body {
+  width: 95vh;
+  max-width: 1200px;
+}
+
+header {
+  width: 90%;
+  height: 9rem;
+  display: flex;
+  background-color: white;
+}
+
+nav {
+  display: flex;
+  width: 66%;
+}
+
+.pill {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 25px;
+  background-color: var(--gold);
+  color: white;
+}
+
+button {
+  height: 15px;
+  width: 15px;
+}
+
+.hero {
+  display: flex;
+  width: 90%;
+  height: 16rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: white;
+}
+/*----------------------index page-------------------*/
+.grid {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*---------------------contact and calculate page----------------*/
+.flex {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+}
+/*------------------social media contact---------------------*/
+.contact {
+  color: var(--blue);
+}
+
+/*-------------------calculate within flex-------------------------*/
+.function {
+  display: flex;
+}
+
+.tool {
+  display: flex;
+}
+
+.how {
+  display: flex;
+}
+
+footer {
+  width: 90%;
+  height: 11rem;
+  background-color: var(--gold);
+}
