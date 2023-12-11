@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
     <!---------------header------------------->
     <header>
-        <img src="/assets/images/Logo.png" alt="imaginary solutions logo">
-        <nav>
-            <a class="pill" href="#"></a>
-            <a class="pill" href="#"></a>
-            <!------single event listener, toggle class to 'dark'------------->
-            <button type="button" data-theme-toggle aria-label="Change to light theme">Switch Mode Light/Dark</button>
-        </nav>
-       
+      <img src="./assets/images/Logo.png" alt="imaginary solutions logo" />
+      <nav>
+        <a class="pill" href="#">Contact Us</a>
+        <a class="pill" href="#">Calculations</a>
+        <!------single event listener, toggle class to 'dark'------------->
+        <div class="toggle">
+            <button
+                id="theme-toggle"
+                type="checkbox"
+                data-theme-toggle
+                aria-label="Change to dark theme"
+            ></button>
+            <p>Switch Mode</p>
+            <p>Light/Dark</p>
+        </div>
+      </nav>
     </header>
     <!---------------------class hero----------------------->
     <section class="hero">
-        <h1>Welcome to Imaginary Solutions Inc.</h1>
-        <h3>
-            At Imaginary Solutions Inc., we specialize in the extraordinary – crafting innovative and entirely fictional solutions to tackle everyday challenges. We're not bound by the constraints of reality; instead, we harness the power of imagination to provide cutting-edge services that push the boundaries of what's possible.
-        </h3>
+      <h1>Welcome to Imaginary Solutions Inc.</h1>
+      <h3>
+        At Imaginary Solutions Inc., we specialize in the extraordinary –
+        crafting innovative and entirely fictional solutions to tackle everyday
+        challenges. We're not bound by the constraints of reality; instead, we
+        harness the power of imagination to provide cutting-edge services that
+        push the boundaries of what's possible.
+      </h3>
     </section>
-    <section class="grid"></section>
+    <section class="grid1">
+      <div class="about">
+        <h3>About Us</h3>
+        <p>
+          Founded on the belief that creativity knows no bounds, Imaginary
+          Solutions Inc. is a trailblazing service company dedicated to
+          delivering imaginative and futuristic solutions. Our team of
+          visionaries and dreamers strives to revolutionize problem-solving
+          through innovative thinking and limitless imagination.
+        </p>
+        <img src="./assets/images/forward thinking.jpg" />
+      </div>
+      <div class="center-home">
+        <div class="join">
+          <h3>Join Us In Shaping Tomorrow</h3>
+          <p>
+            Founded on the belief that creativity knows no bounds, Imaginary
+            Solutions Inc. is a trailblazing service company dedicated to
+            delivering imaginative and futuristic solutions. Our team of
+            visionaries and dreamers strives to revolutionize problem-solving
+            through innovative thinking and limitless imagination.
+          </p>
+          <img src="./assets/images/floating screens.jpg" />
+        </div>
 
-    <footer>
+        <div class="contact">
+          <hr />
+          <h3>Contact Us</h3>
+          <p>
+            Founded on the belief that creativity knows no bounds, Imaginary
+            Solutions Inc. is a trailblazing service company dedicated to
+            delivering imaginative and futuristic solutions. Our team of
+            visionaries and dreamers strives to revolutionize problem-solving
+            through innovative thinking and limitless imagination.
+          </p>
+          <img src="./assets/images/the future is here.jpg" />
+        </div>
+      </div>
+      <div class="services">
+        <h3>Services We Offer</h3>
+        <p>
+          Founded on the belief that creativity knows no bounds, Imaginary
+          Solutions Inc. is a trailblazing service company dedicated to
+          delivering imaginative and futuristic solutions. Our team of
+          visionaries and dreamers strives to revolutionize problem-solving
+          through innovative thinking and limitless imagination.
+        </p>
+        <img src="./assets/images/clear surface doodling.jpg" />
+      </div>
+    </section>
 
-    </footer>
-    
-</body>
+    <footer></footer>
+
+    <script src="./assets/scripts/script.js"></script>
+  </body>
 </html>

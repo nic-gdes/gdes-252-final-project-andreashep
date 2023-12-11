@@ -1,67 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculation Tools</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-<!-----------------------header------------------------------>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <!-----------------------header------------------------------>
     <header>
-        <img src="./assets/images/Logo.png" alt="imaginary solutions logo">
-        <nav>
-            <a class="pill" href="#"></a>
-            <a class="pill" href="#"></a>
-            <button type="button" data-theme-toggle aria-label="Change to light theme">Switch Mode Light/Dark</button>
-        </nav>
-        
+      <img src="./assets/images/Logo.png" alt="imaginary solutions logo" />
+      <nav>
+        <a class="pill" href="#">Home</a>
+        <a class="pill" href="#">Contact Us</a>
+        <div class="toggle">
+          <button
+            type="checkbox"
+            data-theme-toggle
+            aria-label="Change to dark theme"
+          ></button>
+          <p>Switch Mode</p>
+          <p>Light/Dark</p>
+        </div>
+      </nav>
     </header>
-<!---------------------class hero----------------------->
+    <!---------------------class hero----------------------->
     <section class="hero">
-        <h1>Welcome to InnoCalc!</h1>
-        <h3>InnoCalc is an innovative tool designed to tackle everyday challenges through a creative lens. Although it specializes in a select range of conversions, it brings an imaginative touch to these essential transformations.</h3>
+      <h1>Welcome to InnoCalc!</h1>
+      <h3>
+        InnoCalc is an innovative tool designed to tackle everyday challenges
+        through a creative lens. Although it specializes in a select range of
+        conversions, it brings an imaginative touch to these essential
+        transformations.
+      </h3>
     </section>
-<!-----------------content section--------------------------->
-    <section class="flex">
-        <h2>Calculation Tool page
-            InnoCalc - Futuristic Solution Generator</h2>
-<!-----------------how---------------------->
-            <article class="how">
-                <h3>How It Works:</h3>
-                <p>Enter Your Value:
-                    Input your value into the provided field. Let your imagination fuel this transformation!</p>
+    <!-----------------content section--------------------------->
+    <section class="grid3">
+      <h2>Calculation Tool page InnoCalc - Futuristic Solution Generator</h2>
+      <!-----------------how---------------------->
+      <article class="how">
+        <h3>How It Works:</h3>
+        <p>
+          Enter Your Value: Input your value into the provided field. Let your
+          imagination fuel this transformation!
+        </p>
 
-                <h3>Select Your Conversion:</h3>
-                <p>Choose from the available conversion options: Fahrenheit to Celsius, Feet to Miles, or Inches to Centimeters.</p>
+        <h3>Select Your Conversion:</h3>
+        <p>
+          Choose from the available conversion options: Fahrenheit to Celsius,
+          Feet to Miles, or Inches to Centimeters.
+        </p>
 
-                <h3>Generate Your Imaginative Result:</h3>
-                <p>Click your chosen calculation and watch as InnoCalc crafts an imaginative and accurate conversion for you.</p>
-            </article>
-<!---------------------calculation tool----------------------------->
-            <article class="tool">
+        <h3>Generate Your Imaginative Result:</h3>
+        <p>
+          Click your chosen calculation and watch as InnoCalc crafts an
+          imaginative and accurate conversion for you.
+        </p>
+      </article>
+      <!---------------------calculation tool----------------------------->
+    
+      <article class="container">
+        <h2>Conversion Calculator</h2>
+            <label for="inputNumber">Enter Number:</label>
+            <input type="number" id="inputNumber" placeholder="Enter a number">
+            <div class="tool">
+            <button onclick="convert('fahrenheit')">F to C</button>
+            <button onclick="convert('feet')">Feet to Miles</button>
+            <button onclick="convert('inches')">Inches to Centimeters</button>
+          </div>
 
-            </article>
-<!------------------------functionalities-------------------------------------->
-            <article class="function">
-                <h2>Functionalities:</h2>
+        
+            <label for="outputResult">Result:</label>
+            <input type="text" id="outputResult" readonly>
+        
+            <button id="resetButton">Reset</button>
+      </article>
+      <!------------------------functionalities-------------------------------------->
+      <article class="function">
+        <h2>Functionalities:</h2>
 
-                <h3>Fahrenheit to Celsius Conversion:</h3>
-                <p>Transform temperatures from Fahrenheit to Celsius effortlessly with our imaginative touch.</p>
+        <h3>Fahrenheit to Celsius Conversion:</h3>
+        <p>
+          Transform temperatures from Fahrenheit to Celsius effortlessly with
+          our imaginative touch.
+        </p>
 
-                <h3>Feet to Miles Conversion:</h3>
-                <p>Experience a futuristic twist when converting lengths from feet to miles with InnoCalc.</p>
+        <h3>Feet to Miles Conversion:</h3>
+        <p>
+          Experience a futuristic twist when converting lengths from feet to
+          miles with InnoCalc.
+        </p>
 
-                <h3>Inches to Centimeters Conversion:</h3>
-                <p>Witness the magic as InnoCalc converts inches to centimeters with an imaginative flair.</p>
-            </article>
-<!-------------------------sub-text-------------------------------------------->
-
+        <h3>Inches to Centimeters Conversion:</h3>
+        <p>
+          Witness the magic as InnoCalc converts inches to centimeters with an
+          imaginative flair.
+        </p>
+      </article>
+      <!-------------------------sub-text-------------------------------------------->
+      <div class="sub-text">
         <h2>Join the Imaginative Journey!</h2>
 
-        <p>*InnoCalc may have a limited range of functions, but its imaginative touch makes every transformation an adventure. Explore these essential conversions with a sprinkle of creativity and innovation.</p>
-           
+        <p>
+          *InnoCalc may have a limited range of functions, but its imaginative
+          touch makes every transformation an adventure. Explore these essential
+          conversions with a sprinkle of creativity and innovation.
+        </p>
+      </div>
     </section>
     <footer></footer>
-</body>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
 </html>
