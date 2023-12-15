@@ -39,17 +39,16 @@ body {
   margin: 0 auto;
 }
 
-.dark {
-  background-color: var(--black);
-  color: white;
-}
+
 
 header {
   display: flex;
   height: 9rem;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  padding: 0 5%;
 }
 
 header img {
@@ -65,18 +64,10 @@ nav {
   margin-right: 10%;
 }
 
-.toggle{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.toggle p {
-  font-size: 0.75rem;
-  margin: 0;
-}
+
 .pill {
-  width: 10rem;
+  width: 8rem;
   height: 3rem;
   border-radius: 25px;
   background-color: var(--gold);
@@ -87,16 +78,39 @@ nav {
   align-items: center;
 }
 
-header button {
-  height: 25px;
-  width: 25px;
+button {
+  display: flex;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 25px;
   padding: 15px;
   margin: 5px;
+  background-color: var(--gold);
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
 }
+span.gentle-tilt-move-shake:hover {
+  animation: tilt-n-move-shaking 0.25s infinite;
+}
+@keyframes tilt-n-move-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+span.gentle-tilt-move-shake {
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease-in-out;
+}
+
 
 .hero {
   display: flex;
-  width: 90%;
+  width: 100%;
   height: 16rem;
   padding: 0 5%;
   flex-direction: column;
@@ -140,6 +154,61 @@ header button {
   grid-row: 1/2;
 }
 
+.anima {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, var(--gold), var(--black));
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 .center-home {
   grid-column: 2/3;
   grid-row: 1/3;
@@ -161,44 +230,350 @@ hr {
 .grid2 {
   display: grid;
   width: 90%;
-  grid-template-rows: .5fr 1fr 1fr;
+  grid-template-rows: .5fr 1.5fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2rem;
   row-gap: 2rem;
   margin: 0 auto 4rem auto;
 }
 
-.grid2 h3 {
+.grid2 h1, .grid2 h3 {
   color: var(--blue);
   grid-column: 2/3;
   grid-row: 1/2;
 }
 
+.wrapper {
+  height: 11rem;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+}
+
+.wrapper div {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: 4s linear infinite;
+}
+
+div .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+.wrapper div:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.wrapper div:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+.wrapper div:nth-child(3) {
+  top: 40%;
+  left: 40%;
+  animation: animate 3s linear infinite;
+}
+.wrapper div:nth-child(4) {
+  top: 66%;
+  left: 30%;
+  animation: animate 7s linear infinite;
+}
+.wrapper div:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+}
+.wrapper div:nth-child(6) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+}
+.wrapper div:nth-child(7) {
+  top: 70%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.wrapper div:nth-child(8) {
+  top: 75%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+.wrapper div:nth-child(9) {
+  top: 50%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+}
+.wrapper div:nth-child(10) {
+  top: 45%;
+  left: 20%;
+  animation: animate 10s linear infinite;
+}
+.wrapper div:nth-child(11) {
+  top: 10%;
+  left: 90%;
+  animation: animate 9s linear infinite;
+}
+.wrapper div:nth-child(12) {
+  top: 20%;
+  left: 70%;
+  animation: animate 7s linear infinite;
+}
+.wrapper div:nth-child(13) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.wrapper div:nth-child(14) {
+  top: 60%;
+  left: 5%;
+  animation: animate 6s linear infinite;
+}
+.wrapper div:nth-child(15) {
+  top: 90%;
+  left: 80%;
+  animation: animate 9s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100px) rotate(360deg);
+  }
+}
+/*-----------------------end of bubble animation-------------------*/
 .contact {
-  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+
+.social {
+  grid-column: 2/4;
   grid-row: 2/3;
 }
 
 .collab {
-  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  grid-column: 1/4;
   grid-row: 3/4;
 }
 /*-------------------calculate page-------------------------*/
 .grid3 {
   display: grid;
   width: 90%;
-  grid-template-columns: 1fr;
-  grid-template-rows: .25fr 1fr 1.5fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .25fr 1fr .25 1.25fr ;
   margin: 0 auto 4rem auto;
 }
 
 .grid3 h2, .grid3 h3 {
+  grid-column: 1/3;
   grid-row: 1/2;
   color: var(--blue);
   text-align: center;
+  margin: 1rem;
 }
 
-.how, .container, .function, .sub-text{
+.loaderwrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  
+}
+
+.loaderwrapper .pacman:before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background-color: var(--gold);
+  color: var(--gold);
+  border-radius: 100px 100px 0 0;
+  transform: translate(-50%, -50%);
+  animation: pac-top .5s linear infinite;
+  transform-origin: center bottom;
+}
+
+.loaderwrapper .pacman::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background-color: var(--gold);
+  border-radius: 0 0 100px 100px;
+  transform: translate(-50%, 50%);
+  animation: pac-bot .5s linear infinite;
+  transform-origin: center top;
+}
+
+@keyframes pac-top {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-30deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@keyframes pac-bot {
+  0% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, 50%) rotate(30deg);
+  }
+  100% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+}
+
+.sm-dots .tinyDot {
+  position: absolute;
+  z-index: -1;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.sm-dots .tinyDot:nth-child(1) {
+  left: 90px;
+  animation: dot-stage1 .5s infinite;
+}
+
+.sm-dots .tinyDot:nth-child(2) {
+  left: 60px;
+  animation: dot-stage1 .5s infinite;
+}
+
+.sm-dots .tinyDot:nth-child(3) {
+  left: 30px;
+  animation: dot-stage1 .5s infinite;
+}
+.sm-dots .tinyDot:nth-child(4) {
+  left: 10px;
+  animation: dot-stage2 .5s infinite;
+}
+
+@keyframes dot-stage1 {
+  0% {
+    transform: translate(0, 0);
+  }
+ 
+  100% {
+    transform: translate(-24px, 0);
+  }
+}
+
+@keyframes dot-stage2 {
+  0% {
+    transform: scale(1);
+  }
+ 
+  5%, 100% {
+    transform: scale(0);
+  }
+}
+
+/*--------------calculate large div-------------------------*/
+.container {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--blue);
+}
+
+.container h1 {
+  margin-bottom: 3rem;
+  color: var(--gold);
+}
+
+/*-------------------calculate div-------------------------*/
+#conversionButtons  {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5%;
+}
+
+
+/*-------------------calculate buttons-------------------------*/
+
+#inputNumberText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+}
+
+.conversionButton {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 25px;
+  background-color: var(--gold);
+  color: var(--black);
+  margin: 2rem;
+}
+
+/*-------------------calculate answer- modal-------------------------*/
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 50%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-overlay.active {
+  display: block;
+}
+/*-----------------end of calculate tool---------------------*/
+
+.how {
+  grid-column: 1/2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,20 +581,25 @@ hr {
   margin: 0 5%;
 }
 
-.how, .function, .sub-text {
-  text-align: flex-start;
+.function {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5%;
 }
 
-.tool button {
-  width: 10rem;
-  height: 3rem;
-  border-radius: 25px;
-  background-color: var(--grey);
-  color: white;
-  margin: 2rem;
+.sub-text {
+  grid-column: 1/3;
+  grid-row: 5/6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-input {
-  margin-bottom: 10px;
+.how, .function, .sub-text {
+  text-align: flex-start;
 }
 
 /*------------------social media contact---------------------*/
@@ -243,4 +623,128 @@ input {
 footer {
   height: 11rem;
   background-color: var(--gold);
+}
+
+.dark-mode {
+  background-color: var(--black);
+  color: white;
+}
+
+.dark-mode button {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p, .dark-mode a, .dark-mode li {
+  color: var(--grey);
+}
+
+/*-------------------media queries-------------------------*/
+@media screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+    margin: 0;
+  }
+  .grid1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .25fr .75fr .5fr;
+  }
+  .grid1 h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .grid1 img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .anima {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .about {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .center-home {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .services {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .grid2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1.5fr 1fr 1fr;
+  }
+  .grid2 h1, .grid2 h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .contact {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .social {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .collab {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .grid3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: .25fr 1fr .25 1.25fr ;
+  }
+  .grid3 h2, .grid3 h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .container {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .how {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .function {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .sub-text {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .grid4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    flex-direction: column;
+    height: 15rem;
+  }
+ 
+  .grid1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: .25fr .75fr .5fr;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1.5fr 1fr 1fr;
+  }
+
+  .grid3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: .25fr 1fr .25 1.25fr ;
+  }
+
+  .grid4 {
+    grid-template-columns: 1fr;
+  }
 }

@@ -13,16 +13,12 @@
       <nav>
         <a class="pill" href="./index.html">Home</a>
         <a class="pill" href="./contact.html">Contact Us</a>
-        <div class="toggle">
-          <button
-            type="checkbox"
-            data-theme-toggle
-            aria-label="Change to dark theme"
-          ></button>
-          <p>Switch Mode</p>
-          <p>Light/Dark</p>
-        </div>
+       
       </nav>
+       <!------single event listener, toggle class to 'dark'------------->
+       <div>
+        <span class="gentle-tilt-move-shake"><button onclick="myFunction()">Toggle dark mode</button></span>
+    </div>
     </header>
     <!---------------------class hero----------------------->
     <section class="hero">
@@ -37,8 +33,48 @@
     <!-----------------content section--------------------------->
     <section class="grid3">
       <h2>Calculation Tool page InnoCalc - Futuristic Solution Generator</h2>
-      <!-----------------how---------------------->
-      <article class="how">
+      <div class="loaderwrapper">
+        <div class="pacman"></div>
+        <div class="sm-dots">
+          <div class="tinyDot"></div>
+          <div class="tinyDot"></div>
+          <div class="tinyDot"></div>
+          <div class="tinyDot"></div>
+        </div>
+        </div>
+      </div>
+      <!---------------------calculation tool----------------------------->
+    
+      <div class="container">
+        <h1>Conversion Calculator</h1>
+        <!--------------input------------------------->
+            <div>
+               <label for="inputNumber"></label>
+            <input type="number" id="inputNumberText" placeholder="Input number">
+            </div>
+            <!----------------conversion buttons--------------->
+            <div id="conversionButtons">
+             
+              <button class="conversionButton" onclick="convert('fahrenheit')">Fahrenheit to Centigrade</button>
+              <button class="conversionButton" onclick="convert('feet')">Feet to Miles</button>
+              <button class="conversionButton" onclick="convert('inches')">Inches to Centimeters</button>
+          </div>
+
+        <!----------------output----------------------->
+        <div class="modal-overlay" id="modal-overlay">
+          <div class="modal-container">
+              <div id="outputResult">
+                  <h2>Answer Output</h2>
+                  <input type="text" id="outputResultText" readonly />
+              </div>
+              <div id="reset">
+                  <button id="clearButton" onclick="reset()">reset</button>
+              </div>
+          </div>
+      </div>
+      </div>
+       <!-----------------how---------------------->
+       <article class="how">
         <h3>How It Works:</h3>
         <p>
           Enter Your Value: Input your value into the provided field. Let your
@@ -56,24 +92,6 @@
           Click your chosen calculation and watch as InnoCalc crafts an
           imaginative and accurate conversion for you.
         </p>
-      </article>
-      <!---------------------calculation tool----------------------------->
-    
-      <article class="container">
-        <h2>Conversion Calculator</h2>
-            <label for="inputNumber">Enter Number:</label>
-            <input type="number" id="inputNumber" placeholder="Enter a number">
-            <div class="tool">
-            <button onclick="convert('fahrenheit')">F to C</button>
-            <button onclick="convert('feet')">Feet to Miles</button>
-            <button onclick="convert('inches')">Inches to Centimeters</button>
-          </div>
-
-        
-            <label for="outputResult">Result:</label>
-            <input type="text" id="outputResult" readonly>
-        
-            <button id="resetButton">Reset</button>
       </article>
       <!------------------------functionalities-------------------------------------->
       <article class="function">
